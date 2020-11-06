@@ -1,0 +1,1 @@
+<div class="text-center text-white" id="copyright text-rifht">&copy; Copyright Car Rental <?= date("Y") ?></div>

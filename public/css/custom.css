@@ -1,0 +1,118 @@
+body{
+  background-color: #f7f7f7 !important;
+}
+
+ul > li > a {
+    color: white !important;
+}
+
+ul > li > a.nav-link:hover{
+    border-bottom: white 2px solid;
+}
+
+ul > li > a.nav-link:active{
+    border-bottom: white 2px solid;
+}
+
+.navbar
+{
+  background-color: #035fd4 !important;
+}
+
+.navbar
+{
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.contenedor-imagen > img {
+  object-fit: cover;
+}
+
+.contenedor-imagen {
+  height: 220px;
+}
+
+.contenedor-imagen > img{
+  height: 80%;
+}
+
+.card {
+  overflow:auto;
+  max-width: 100%;
+}
+
+
+/* carousel */
+@media (min-width: 768px) {
+  /* show 3 items */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item,
+  .carousel-inner .active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none;
+  }
+
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+  }
+
+  #autosCarousel .carousel-inner .carousel-item {
+    margin-right: 0%;
+  }
+}
+@media (max-width: 180px) and (max-width: 767px) {
+  #autosCarousel .carousel-inner div.carousel-item {
+    margin-right: 100%;
+  }
+}
